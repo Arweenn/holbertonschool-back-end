@@ -16,7 +16,7 @@ if __name__ == "__main__":
     infos = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(user_id))
     user = infos.json()
-    EMPLOYEE_NAME = user.get("username")
+    employee = user.get("username")
 
     infos = requests.get(
         "https://jsonplaceholder.typicode.com/todos?userID={}".format(user_id))
@@ -25,5 +25,5 @@ if __name__ == "__main__":
     with open("{}.csv".format(user_id), 'w') as csv_f:
         writer = csv.writer(csv_f, quoting=csv.QUOTE_ALL)
         for task in todos:
-            writer.writerow([user_id, EMPLOYEE_NAME,
+            writer.writerow([user_id, employee,
                             task.get("completed"), task.get("title")])

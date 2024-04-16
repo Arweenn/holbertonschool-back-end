@@ -16,7 +16,7 @@ if __name__ == "__main__":
     infos = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(user_id))
     user = infos.json()
-    EMPLOYEE_NAME = user.get("username")
+    employee = user.get("username")
 
     infos = requests.get(
         "https://jsonplaceholder.typicode.com/todos?userID={}".format(user_id))
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         task = {
             "task": todo.get("title"),
             "completed": todo.get("completed"),
-            "username": EMPLOYEE_NAME
+            "username": employee
         }
         tasks.append(task)
 
