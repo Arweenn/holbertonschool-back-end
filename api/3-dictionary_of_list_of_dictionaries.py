@@ -19,7 +19,8 @@ if __name__ == "__main__":
     for employee in employees:
         emp_id = employee.get("id")
         infos = requests.get(
-            "https://jsonplaceholder.typicode.com/todos?userId={}".format(emp_id))
+            "https://jsonplaceholder.typicode.com/todos?userId={}".format(
+                emp_id))
         todos = infos.json()
         data[emp_id] = [{"task": task.get("title"),
                          "completed": task.get("completed"),
