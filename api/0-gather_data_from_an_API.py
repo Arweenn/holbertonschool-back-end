@@ -25,7 +25,7 @@ if __name__ == "__main__":
     tasks_done = [task for task in todos if task.get(
         "completed") is True]
 
-    print("Employee {} is done with task({}/{}):".format
+    print("Employee {} is done with tasks({}/{}):".format
           (employee, len(tasks_done), total_tasks))
 
     for task in tasks_done:
