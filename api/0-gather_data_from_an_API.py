@@ -22,8 +22,8 @@ if __name__ == "__main__":
     todos = infos.json()
     total_tasks = len(todos)
 
-    tasks_done = [task for task
-                            in todos if task.get("completed") is True]
+    tasks_done = [task for task in todos if task.get(
+        "completed") is True]
 
     print("Employee {} is done with task({}/{}):".format
           (employee, len(tasks_done), total_tasks))
