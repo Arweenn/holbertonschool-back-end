@@ -18,7 +18,7 @@ if __name__ == "__main__":
     employee = user.get("name")
 
     infos = requests.get(
-        'https://jsonplaceholder.typicode.com/todos?userID={}'.format(user_id))
+        'https://jsonplaceholder.typicode.com/todos?userId={}'.format(user_id))
     todos = infos.json()
     total_tasks = len(todos)
 
