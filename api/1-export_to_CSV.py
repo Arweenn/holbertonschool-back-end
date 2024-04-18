@@ -4,9 +4,9 @@ Script that uses a REST API to return informations
 about an employee's progress.
 """
 
+import csv
 import requests
 from sys import argv
-import csv
 
 
 if __name__ == "__main__":
